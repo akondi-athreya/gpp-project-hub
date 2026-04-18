@@ -663,13 +663,13 @@ And this repository is the proof of work.
 <div align="center">
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                                                         │
-│   Built with persistence, late nights, and coffee ☕     │
-│                                                         │
-│          G P P  ×  P A R T N R  ×  2 0 2 5 - 26         │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
+                ┌─────────────────────────────────────────────────────────┐
+                │                                                         │
+                │   Built with persistence, late nights, and coffee ☕     │
+                │                                                         │
+                │          G P P  ×  P A R T N R  ×  2 0 2 5 - 26         │
+                │                                                         │
+                └─────────────────────────────────────────────────────────┘
 ```
 
 [![GitHub](https://img.shields.io/badge/GitHub-akondi--athreya-181717?style=for-the-badge&logo=github&labelColor=0a0a0a)](https://github.com/akondi-athreya)
