@@ -19,13 +19,13 @@
 
 <br/>
 
-> *14 weeks. 14 production-grade systems. Zero shortcuts.*
+> *18 weeks. 20 production-grade systems. Zero shortcuts.*
 
 <br/>
 
-[![Projects](https://img.shields.io/badge/⚙_PROJECTS-14_SHIPPED-00ff88?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
+[![Projects](https://img.shields.io/badge/⚙_PROJECTS-20_SHIPPED-00ff88?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
 [![Domains](https://img.shields.io/badge/🧠_DOMAINS-AI_·_FinTech_·_SaaS_·_Data-7c3aed?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
-[![Stack](https://img.shields.io/badge/⚡_STACK-12+_TECHNOLOGIES-ff6b35?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
+[![Stack](https://img.shields.io/badge/⚡_STACK-15+_TECHNOLOGIES-ff6b35?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
 [![Program](https://img.shields.io/badge/🚀_PROGRAM-GPP_×_PARTNR-e879f9?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
 
 </div>
@@ -40,7 +40,7 @@ This isn't a portfolio of tutorials.
 
 Every project here was **assigned, built, and shipped** — one per week — under the **Global Placement Program by Partnr**. The brief resets every Saturday. The clock starts ticking. The only rule: build it production-ready or don't build it at all.
 
-What you're looking at is **14 consecutive weeks** of backend systems, AI/ML pipelines, cloud deployments, event-driven architectures, and full-stack platforms — each one integrating multiple technologies, enforcing real-world patterns, and solving problems that actually matter in engineering teams.
+What you're looking at is **18 consecutive weeks** of backend systems, AI/ML pipelines, cloud deployments, event-driven architectures, and full-stack platforms — each one integrating multiple technologies, enforcing real-world patterns, and solving problems that actually matter in engineering teams.
 
 No tutorials. No copy-paste. No hand-holding.
 
@@ -77,6 +77,12 @@ Just engineering.
 | `12` | 📊 **SaaS Analytics Dashboard** | SaaS · RSC · Streaming | Next.js 14 · Prisma · TypeScript · Playwright | [→](https://github.com/akondi-athreya/gpp-Multi-Tenant-SaaS-Analytics-Dashboard) |
 | `13` | 📁 **StreamDrive** | File Systems · Streaming | Next.js · TypeScript · SMB · Tailwind | [→](https://github.com/akondi-athreya/gpp-stream-drive) |
 | `14` | 🤖 **LLM Prompt Router** | AI · LLM Architecture | Python · FastAPI · OpenAI · Docker | [→](https://github.com/akondi-athreya/gpp-llm-powered-prompt-router) |
+| `15` | 🤖 **Customer Support Chatbot** | AI · LLM · Offline Inference | Python · Ollama · Llama 3.2 · datasets | [→](https://github.com/akondi-athreya/gpp-chatbot) |
+| `16` | 🏛️ **Multi-Tenant Spring Starter** | Backend · Frameworks · SaaS | Java 21 · Spring Boot 3 · PostgreSQL | [→](https://github.com/akondi-athreya/gpp-multitenancy-spring) |
+| `17` | 🔐 **User Profile Service** | Backend · Security · Configuration | Java · Spring Boot · Vault · JWT | [→](https://github.com/akondi-athreya/gpp-user-profile-service) |
+| `18` | 📤 **Incremental Export System** | Backend · Data Engineering · CDC | Node.js · Express · PostgreSQL · Docker | [→](https://github.com/akondi-athreya/gpp-incremental-export-system) |
+| `19` | 📜 **Multi-Tenant Audit System** | Security · EDA · Infrastructure | Kafka · SASL/SCRAM · MinIO · Node.js | [→](https://github.com/akondi-athreya/gpp-audit-log-system) |
+| `20` | 📡 **Log Aggregation Pipeline** | Observability · Data Engineering | Kafka · Fluentd · Node.js · WebSocket | [→](https://github.com/akondi-athreya/gpp-log-aggregation) |
 
 </details>
 
@@ -424,21 +430,166 @@ If classifier confidence falls below a configurable threshold, the system asks a
 
 ---
 
+### `15` 🤖 Customer Support Chatbot — *Offline LLM Inference*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-chatbot)**
+
+```
+DOMAIN   │ AI · LLM · Offline Inference
+STACK    │ Python · Ollama · Llama 3.2 3B · Requests · Hugging Face Datasets
+PATTERN  │ Zero-Shot vs One-Shot Prompting · Offline Inference · Comparative Analysis
+```
+
+Privacy-first customer support chatbot for e-commerce, running entirely on local infrastructure via **Ollama**. This project explores the end-to-end LLM workflow: prompt engineering, batch inference, and manual response evaluation without external API dependencies.
+
+Implements a side-by-side evaluation of **Zero-Shot** and **One-Shot** prompting strategies. Each model response is scored on relevance, coherence, and helpfulness, providing empirical insights into prompt sensitivity for specific business domains.
+
+```
+✦ Fully local Llama 3.2 3B inference — zero data leakage
+✦ Systematic Zero-Shot vs One-Shot prompt comparison
+✦ Automated evaluation pipeline processing 20+ support scenarios
+✦ Structured results logging with human-in-the-loop scoring
+```
+
+<br/>
+
+---
+
+### `16` 🏛️ Multi-Tenant Spring Starter — *Reusable SaaS Infrastructure*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-multitenancy-spring)**
+
+```
+DOMAIN   │ Backend · Frameworks · SaaS Architecture
+STACK    │ Java 21 · Spring Boot 3 · PostgreSQL · Docker · Maven
+PATTERN  │ Header-Based Multi-Tenancy · Pluggable Tenant Resolution · Auto-Configuration
+```
+
+A production-ready **Spring Boot Starter** that provides seamless, header-based multi-tenant datasource routing. It abstracts tenant resolution behind a `TenantResolver` interface, enabling developers to switch between header (`X-Tenant-ID`), subdomain, or JWT-based strategies with minimal code changes.
+
+Includes a demo application with isolated tenant CRUD APIs, a dynamic `TenantAwareRoutingDataSource`, and custom health actuators that report the status of each individual tenant's database connection.
+
+```
+✦ Reusable Spring Boot Starter with @AutoConfiguration
+✦ ThreadLocal-based TenantContext for per-request isolation
+✦ Dynamic datasource routing with 100% data separation
+✦ Custom Actuator health indicators per tenant
+```
+
+<br/>
+
+---
+
+### `17` 🔐 User Profile Service — *Secret Management with HashiCorp Vault*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-user-profile-service)**
+
+```
+DOMAIN   │ Backend · Security · Configuration
+STACK    │ Java · Spring Boot · HashiCorp Vault · PostgreSQL · JWT
+PATTERN  │ Externalized Configuration · Secret Management · Fail-Fast Startup
+```
+
+Advanced Spring Boot microservice demonstrating secure secret management. Instead of local environment variables, the system externalizes sensitive data (DB credentials, JWT signing keys) to **HashiCorp Vault**.
+
+The architecture uses a three-container orchestration: Vault, a setup-worker for secret initialization, and the application. Implements a **Fail-Fast** strategy where the service refuses to boot if Vault is unreachable or if required secrets are missing, ensuring no insecure "fallback" states.
+
+```
+✦ HashiCorp Vault integration via Spring Cloud Vault
+✦ Externalized DB/JWT secrets — no sensitive data in .env
+✦ Container orchestration with health-dependent startup order
+✦ Admin dashboard for real-time Vault connectivity status
+```
+
+<br/>
+
+---
+
+### `18` 📤 Incremental Export System — *Application-Level CDC*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-incremental-export-system)**
+
+```
+DOMAIN   │ Backend · Data Engineering · CDC
+STACK    │ Node.js · Express · PostgreSQL · Docker · Jest
+PATTERN  │ Application-Level CDC · Consumer Watermarks · Asynchronous Job Queue
+```
+
+High-performance data export system using **Change Data Capture (CDC)** logic to stream incremental updates to external consumers. It manages a 120,000+ row dataset and tracks independent progress for each consumer using a persistent **Watermark** table.
+
+Supports three export modes: Full (all active data), Incremental (changes since last watermark), and **Delta** (including operation flags: INSERT/UPDATE/DELETE). Exports run as background jobs, writing streamed CSV outputs to a shared volume with transactional safety.
+
+```
+✦ Watermark-based incremental sync — zero duplicate processing
+✦ Operation-aware Delta exports (I/U/D change semantics)
+✦ Asynchronous job queue with Job ID tracking
+✦ Transactional unit-of-work: watermark updates only on success
+```
+
+<br/>
+
+---
+
+### `19` 📜 Multi-Tenant Audit System — *Hardened Event Streaming*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-audit-log-system)**
+
+```
+DOMAIN   │ Security · Event-Driven Architecture · Cloud Infrastructure
+STACK    │ Apache Kafka · SASL/SCRAM · MinIO (S3) · Node.js · Docker
+PATTERN  │ Kafka ACLs · Client Quotas · Multi-Tenant Event Archival
+```
+
+Enterprise-grade audit logging system built on **Hardened Kafka**. It enforces strict multi-tenant isolation at the infrastructure level using **SASL/SCRAM authentication** and **Kafka ACLs**, preventing tenants from reading or writing to each other's topics.
+
+Includes fair-usage enforcement via **Kafka client quotas** (throughput throttling) and an archival worker that consumes tenant-specific event streams and persists them to **MinIO (S3-compatible)** for long-term compliance storage.
+
+```
+✦ SASL/SCRAM + ACLs for infrastructure-level tenant isolation
+✦ Kafka Client Quotas to prevent "noisy neighbor" scenarios
+✦ Real-time archival to S3-compatible storage (MinIO)
+✦ Automatic violation logging to a dedicated security topic
+```
+
+<br/>
+
+---
+
+### `20` 📡 Log Aggregation Pipeline — *Observability at Scale*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-log-aggregation)**
+
+```
+DOMAIN   │ Observability · Data Engineering · Backend
+STACK    │ Apache Kafka · Fluentd · Node.js · WebSocket · Redis
+PATTERN  │ Centralized Log Bus · Trace Propagation · Stream Processing
+```
+
+Comprehensive observability pipeline using Kafka as a **Central Log Bus**. Distributed microservices generate structured logs with shared **Trace Identifiers**, which are collected by **Fluentd** and streamed into Kafka topics with configured retention and cleanup policies.
+
+A dedicated processor consumes raw logs to group traces and detect error spikes, while a dashboard backend provides a real-time log stream via **WebSockets** and a REST API for historical trace lookup and alert management.
+
+```
+✦ Centralized log bus with Fluentd collector + Kafka storage
+✦ Distributed trace propagation across multiple dummy services
+✦ Real-time WebSocket log stream for live observability
+✦ Stream processing for error spike detection and alerting
+```
+
+<br/>
+
+---
+
 <br/>
 
 ## `$ cat ./tech-stack.json`
 
 ```json
 {
-  "languages":    ["JavaScript", "TypeScript", "Python", "Java"],
-  "frameworks":   ["Node.js", "Express", "FastAPI", "Spring Boot", "Next.js", "React", "Streamlit"],
-  "databases":    ["PostgreSQL", "MongoDB", "Redis"],
-  "ai_ml":        ["DistilBERT", "ONNX Runtime", "MLflow", "Hugging Face Transformers", "OpenAI API"],
-  "data_infra":   ["Apache Kafka", "Debezium", "CDC", "WAL Streaming"],
-  "devops":       ["Docker", "Docker Compose", "Multi-Stage Builds", "Render"],
-  "testing":      ["Jest", "Supertest", "Playwright", "pytest"],
+  "languages":    ["JavaScript", "TypeScript", "Python", "Java", "SQL"],
+  "frameworks":   ["Node.js", "Express", "FastAPI", "Spring Boot", "Next.js", "React", "Ollama", "Fluentd"],
+  "databases":    ["PostgreSQL", "MongoDB", "Redis", "MinIO (S3)", "HashiCorp Vault"],
+  "ai_ml":        ["DistilBERT", "ONNX Runtime", "MLflow", "Llama 3.2", "Hugging Face", "OpenAI API"],
+  "data_infra":   ["Apache Kafka", "Debezium", "CDC", "Kafka ACLs", "Fluentd Log Bus"],
+  "devops":       ["Docker", "Docker Compose", "Multi-Stage Builds", "Render", "Vault Secret Mgmt"],
+  "testing":      ["Jest", "Supertest", "Playwright", "pytest", "JUnit 5", "Human-in-the-Loop"],
   "patterns":     ["CQRS", "CDC", "Repository Pattern", "Unit of Work", "State Machine",
-                   "Multi-Tenancy", "RBAC", "Idempotency", "Async Job Queues", "RSC Streaming"]
+                   "Multi-Tenancy", "RBAC", "Idempotency", "Async Job Queues", "RSC Streaming",
+                   "Kafka ACLs", "Client Quotas", "Trace Propagation", "Vault Externalized Config"]
 }
 ```
 
@@ -451,7 +602,13 @@ If classifier confidence falls below a configurable threshold, the system asks a
 ## `$ git log --oneline --stat`
 
 ```
-week-14  llm-prompt-router          ████████████████████  AI · Two-stage LLM pipeline
+week-18  log-aggregation            ████████████████████  Observability · Kafka Bus
+week-17  audit-log-system           ████████████████████  Kafka ACLs · Client Quotas
+week-16  incremental-export         ████████████████████  CDC · Watermarks · Jobs
+week-15  user-profile-service       ████████████████████  Vault · Spring Cloud · Security
+week-14  multitenancy-spring        ████████████████████  Java · Spring Boot · SaaS
+week-14  chatbot                    ████████████████████  Ollama · Llama 3.2 · Prompting
+week-13  llm-prompt-router          ████████████████████  AI · Two-stage LLM pipeline
 week-13  stream-drive               ████████████████████  SMB · Streaming file browser
 week-12  saas-analytics-dashboard   ████████████████████  Next.js 14 · RSC · Playwright
 week-11  data-sync-pipeline         ████████████████████  Kafka · Debezium · CDC
@@ -466,7 +623,7 @@ week-03  workspace-hub              ██████████████�
 week-02  library-management         ████████████████████  State Machines · ACID
 week-01  cipher-dock                ████████████████████  RSA · TOTP · Cryptography
 
- 14 projects, 14 weeks, 100% completion rate.
+ 20 projects, 18 weeks, 100% completion rate.
 ```
 
 <br/>
