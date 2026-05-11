@@ -19,11 +19,11 @@
 
 <br/>
 
-> *18 weeks. 20 production-grade systems. Zero shortcuts.*
+> *21 weeks. 24 production-grade systems. Zero shortcuts.*
 
 <br/>
 
-[![Projects](https://img.shields.io/badge/⚙_PROJECTS-20_SHIPPED-00ff88?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
+[![Projects](https://img.shields.io/badge/⚙_PROJECTS-24_SHIPPED-00ff88?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
 [![Domains](https://img.shields.io/badge/🧠_DOMAINS-AI_·_FinTech_·_SaaS_·_Data-7c3aed?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
 [![Stack](https://img.shields.io/badge/⚡_STACK-15+_TECHNOLOGIES-ff6b35?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
 [![Program](https://img.shields.io/badge/🚀_PROGRAM-GPP_×_PARTNR-e879f9?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
@@ -40,7 +40,7 @@ This isn't a portfolio of tutorials.
 
 Every project here was **assigned, built, and shipped** — one per week — under the **Global Placement Program by Partnr**. The brief resets every Saturday. The clock starts ticking. The only rule: build it production-ready or don't build it at all.
 
-What you're looking at is **18 consecutive weeks** of backend systems, AI/ML pipelines, cloud deployments, event-driven architectures, and full-stack platforms — each one integrating multiple technologies, enforcing real-world patterns, and solving problems that actually matter in engineering teams.
+What you're looking at is **21 consecutive weeks** of backend systems, AI/ML pipelines, cloud deployments, event-driven architectures, and full-stack platforms — each one integrating multiple technologies, enforcing real-world patterns, and solving problems that actually matter in engineering teams.
 
 No tutorials. No copy-paste. No hand-holding.
 
@@ -83,6 +83,10 @@ Just engineering.
 | `18` | 📤 **Incremental Export System** | Backend · Data Engineering · CDC | Node.js · Express · PostgreSQL · Docker | [→](https://github.com/akondi-athreya/gpp-incremental-export-system) |
 | `19` | 📜 **Multi-Tenant Audit System** | Security · EDA · Infrastructure | Kafka · SASL/SCRAM · MinIO · Node.js | [→](https://github.com/akondi-athreya/gpp-audit-log-system) |
 | `20` | 📡 **Log Aggregation Pipeline** | Observability · Data Engineering | Kafka · Fluentd · Node.js · WebSocket | [→](https://github.com/akondi-athreya/gpp-log-aggregation) |
+| `21` | 🚀 **Caching Layer API** | Backend · Performance | Redis · Memcached · Node.js | [→](https://github.com/akondi-athreya/gpp-caching-layer) |
+| `22` | 🛡️ **Bulkhead Pattern API** | Backend · Resilience | Node.js · PostgreSQL · Docker | [→](https://github.com/akondi-athreya/gpp-bulkhead-pattern) |
+| `23` | 🎨 **Interactive Portfolio** | Frontend · UX/UI | React · Tailwind · Framer Motion | [→](https://github.com/akondi-athreya/athreya-portfolio) |
+| `24` | 🤖 **Conversational Form AI** | AI · Full-Stack | React · Node.js · JSON Schema | [→](https://github.com/akondi-athreya/gpp-conversational-form) |
 
 </details>
 
@@ -574,6 +578,102 @@ A dedicated processor consumes raw logs to group traces and detect error spikes,
 
 ---
 
+### `21` 🚀 Caching Layer API — *Redis vs Memcached Performance*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-caching-layer)**
+
+```
+DOMAIN   │ Backend · Performance · Cache Design
+STACK    │ Node.js · Express 5 · Redis 7 · Memcached 1.6 · PostgreSQL 16
+PATTERN  │ Read-through Cache · Atomic Leaderboard · Distributed Rate Limiting
+```
+
+High-performance product catalog API designed to compare and contrast Redis and Memcached under realistic production workloads. It implements a **backend-agnostic caching layer** where requests can be toggled between backends via headers to observe differences in latency, memory overhead, and consistency.
+
+Includes a **distributed rate limiter** with atomic Lua scripts for Redis and text-protocol fallback for Memcached, plus a **leaderboard engine** that demonstrates the necessity of distributed locking in Memcached vs native atomicity in Redis.
+
+```
+✦ Redis vs Memcached performance benchmarks (~260k vs ~120k ops/sec)
+✦ Atomic ZINCRBY (Redis) vs Lock-based increments (Memcached)
+✦ Global rate limiting with per-minute window and header emission
+✦ Deterministic high-volume DB seeding (100k+ products)
+```
+
+<br/>
+
+---
+
+### `22` 🛡️ Bulkhead Pattern API — *Resilience & Isolation*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-bulkhead-pattern)**
+
+```
+DOMAIN   │ Backend · System Resilience · SaaS Architecture
+STACK    │ Node.js · PostgreSQL · Docker Compose · p-limit
+PATTERN  │ Bulkhead Pattern · Circuit Breaker · Resource Isolation · Tiered QoS
+```
+
+Production-grade implementation of the **Bulkhead Pattern** to ensure system stability in multi-tenant environments. It prevents "noisy neighbor" scenarios by isolating database connection pools, request worker limits, and throughput quotas by subscription tier (`Free`, `Pro`, `Enterprise`).
+
+Features per-tier **Circuit Breakers** that trip independently, ensuring a failure in the Free tier does not degrade the experience for Enterprise users. Includes a custom metrics endpoint and a load-testing suite to empirically prove resource isolation under stress.
+
+```
+✦ Tier-isolated connection pools and worker thread limits
+✦ Independent Circuit Breakers (Open/Half-Open/Closed states)
+✦ Tiered Rate Limiting (100/min Free vs 1000/min Pro vs Unlimited)
+✦ Load test script proving zero-degradation cross-tier isolation
+```
+
+<br/>
+
+---
+
+### `23` 🎨 Interactive Portfolio — *Animated Personal Branding*
+**[`→ View Repository`](https://github.com/akondi-athreya/athreya-portfolio)**
+
+```
+DOMAIN   │ Full-Stack · Frontend Engineering · UX/UI
+STACK    │ React 19 · Vite 8 · Tailwind CSS 4 · Framer Motion · GSAP · Shadcn/UI
+PATTERN  │ Single Page Application · Animation Orchestration · Responsive Design
+```
+
+A highly interactive, animated personal portfolio built from scratch to showcase engineering projects and professional background. Leverages **React 19 and Vite 8** for extreme performance, with complex animation sequences orchestrated via **Framer Motion and GSAP**.
+
+The UI is built with **Tailwind CSS 4** and **Shadcn/UI** components, featuring a fully responsive layout, dark mode support, and smooth scroll transitions. It serves as a living proof-of-work, integrating all GPP projects into a cohesive visual experience.
+
+```
+✦ Complex UI animations with Framer Motion + GSAP orchestration
+✦ Built with React 19 and Tailwind CSS 4 for modern performance
+✦ Fully responsive design with optimized asset loading
+✦ Integrated project showcase with dynamic filtering
+```
+
+<br/>
+
+---
+
+### `24` 🤖 Conversational Form AI — *LLM-Driven Dynamic UI*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-conversational-form)**
+
+```
+DOMAIN   │ AI · Full-Stack · Schema Engineering
+STACK    │ React · Node.js · JSON Schema · Ajv · OpenAI API
+PATTERN  │ LLM-Driven UI · Schema Validation · Conversation State · Schema Diffing
+```
+
+Advanced AI-powered system that generates functional, validated forms from natural language prompts. It uses a **two-stage LLM pipeline** to first classify intent and then generate a strictly valid **JSON Schema (Draft-07)**, which is then rendered on the fly in the React frontend.
+
+Includes a **live form renderer** with support for conditional field visibility (`x-show-when`), a **schema diff panel** to track iterations, and multi-format export options (JSON, Code, cURL). The backend implements robust validation and retry logic to handle non-deterministic LLM outputs.
+
+```
+✦ Natural language to functional JSON Schema generation
+✦ Live form renderer with conditional logic support
+✦ Schema validation with Ajv + automated LLM retry logic
+✦ Diff panel + Multi-format export (JSON/Code/cURL)
+```
+
+<br/>
+
+---
+
 <br/>
 
 ## `$ cat ./tech-stack.json`
@@ -581,15 +681,16 @@ A dedicated processor consumes raw logs to group traces and detect error spikes,
 ```json
 {
   "languages":    ["JavaScript", "TypeScript", "Python", "Java", "SQL"],
-  "frameworks":   ["Node.js", "Express", "FastAPI", "Spring Boot", "Next.js", "React", "Ollama", "Fluentd"],
-  "databases":    ["PostgreSQL", "MongoDB", "Redis", "MinIO (S3)", "HashiCorp Vault"],
+  "frameworks":   ["Node.js", "Express", "FastAPI", "Spring Boot", "Next.js", "React", "Ollama", "Fluentd", "Vite", "Tailwind CSS", "Framer Motion"],
+  "databases":    ["PostgreSQL", "MongoDB", "Redis", "MinIO (S3)", "HashiCorp Vault", "Memcached"],
   "ai_ml":        ["DistilBERT", "ONNX Runtime", "MLflow", "Llama 3.2", "Hugging Face", "OpenAI API"],
   "data_infra":   ["Apache Kafka", "Debezium", "CDC", "Kafka ACLs", "Fluentd Log Bus"],
   "devops":       ["Docker", "Docker Compose", "Multi-Stage Builds", "Render", "Vault Secret Mgmt"],
   "testing":      ["Jest", "Supertest", "Playwright", "pytest", "JUnit 5", "Human-in-the-Loop"],
   "patterns":     ["CQRS", "CDC", "Repository Pattern", "Unit of Work", "State Machine",
                    "Multi-Tenancy", "RBAC", "Idempotency", "Async Job Queues", "RSC Streaming",
-                   "Kafka ACLs", "Client Quotas", "Trace Propagation", "Vault Externalized Config"]
+                   "Kafka ACLs", "Client Quotas", "Trace Propagation", "Vault Externalized Config",
+                   "Bulkhead Pattern", "Circuit Breakers", "Read-through Caching", "Schema Engineering"]
 }
 ```
 
@@ -602,6 +703,10 @@ A dedicated processor consumes raw logs to group traces and detect error spikes,
 ## `$ git log --oneline --stat`
 
 ```
+week-21  conversational-form        ████████████████████  AI · Schema Generation
+week-20  bulkhead-pattern           ████████████████████  Resilience · Isolation
+week-20  athreya-portfolio          ████████████████████  Frontend · UX · Animation
+week-19  caching-layer              ████████████████████  Redis · Memcached · Perf
 week-18  log-aggregation            ████████████████████  Observability · Kafka Bus
 week-17  audit-log-system           ████████████████████  Kafka ACLs · Client Quotas
 week-16  incremental-export         ████████████████████  CDC · Watermarks · Jobs
@@ -623,7 +728,7 @@ week-03  workspace-hub              ██████████████�
 week-02  library-management         ████████████████████  State Machines · ACID
 week-01  cipher-dock                ████████████████████  RSA · TOTP · Cryptography
 
- 20 projects, 18 weeks, 100% completion rate.
+ 24 projects, 21 weeks, 100% completion rate.
 ```
 
 <br/>
