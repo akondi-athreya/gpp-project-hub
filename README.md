@@ -19,11 +19,11 @@
 
 <br/>
 
-> *21 weeks. 24 production-grade systems. Zero shortcuts.*
+> *22 weeks. 25 production-grade systems. Zero shortcuts.*
 
 <br/>
 
-[![Projects](https://img.shields.io/badge/⚙_PROJECTS-24_SHIPPED-00ff88?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
+[![Projects](https://img.shields.io/badge/⚙_PROJECTS-25_SHIPPED-00ff88?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
 [![Domains](https://img.shields.io/badge/🧠_DOMAINS-AI_·_FinTech_·_SaaS_·_Data-7c3aed?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
 [![Stack](https://img.shields.io/badge/⚡_STACK-15+_TECHNOLOGIES-ff6b35?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
 [![Program](https://img.shields.io/badge/🚀_PROGRAM-GPP_×_PARTNR-e879f9?style=for-the-badge&labelColor=0a0a0a)](https://github.com/akondi-athreya)
@@ -40,7 +40,7 @@ This isn't a portfolio of tutorials.
 
 Every project here was **assigned, built, and shipped** — one per week — under the **Global Placement Program by Partnr**. The brief resets every Saturday. The clock starts ticking. The only rule: build it production-ready or don't build it at all.
 
-What you're looking at is **21 consecutive weeks** of backend systems, AI/ML pipelines, cloud deployments, event-driven architectures, and full-stack platforms — each one integrating multiple technologies, enforcing real-world patterns, and solving problems that actually matter in engineering teams.
+What you're looking at is **22 consecutive weeks** of backend systems, AI/ML pipelines, cloud deployments, event-driven architectures, and full-stack platforms — each one integrating multiple technologies, enforcing real-world patterns, and solving problems that actually matter in engineering teams.
 
 No tutorials. No copy-paste. No hand-holding.
 
@@ -79,14 +79,16 @@ Just engineering.
 | `14` | 🤖 **LLM Prompt Router** | AI · LLM Architecture | Python · FastAPI · OpenAI · Docker | [→](https://github.com/akondi-athreya/gpp-llm-powered-prompt-router) |
 | `15` | 🤖 **Customer Support Chatbot** | AI · LLM · Offline Inference | Python · Ollama · Llama 3.2 · datasets | [→](https://github.com/akondi-athreya/gpp-chatbot) |
 | `16` | 🏛️ **Multi-Tenant Spring Starter** | Backend · Frameworks · SaaS | Java 21 · Spring Boot 3 · PostgreSQL | [→](https://github.com/akondi-athreya/gpp-multitenancy-spring) |
-| `17` | 🔐 **User Profile Service** | Backend · Security · Configuration | Java · Spring Boot · Vault · JWT | [→](https://github.com/akondi-athreya/gpp-user-profile-service) |
+| `17` | 🔐 **User Profile Service** | Backend · Security · Configuration | Java · Spring Boot · Vault · JWT | [→](https://github.com/akondi-athreya/gpp-secure-user-profile-service) |
 | `18` | 📤 **Incremental Export System** | Backend · Data Engineering · CDC | Node.js · Express · PostgreSQL · Docker | [→](https://github.com/akondi-athreya/gpp-incremental-export-system) |
 | `19` | 📜 **Multi-Tenant Audit System** | Security · EDA · Infrastructure | Kafka · SASL/SCRAM · MinIO · Node.js | [→](https://github.com/akondi-athreya/gpp-audit-log-system) |
 | `20` | 📡 **Log Aggregation Pipeline** | Observability · Data Engineering | Kafka · Fluentd · Node.js · WebSocket | [→](https://github.com/akondi-athreya/gpp-log-aggregation) |
 | `21` | 🚀 **Caching Layer API** | Backend · Performance | Redis · Memcached · Node.js | [→](https://github.com/akondi-athreya/gpp-caching-layer) |
 | `22` | 🛡️ **Bulkhead Pattern API** | Backend · Resilience | Node.js · PostgreSQL · Docker | [→](https://github.com/akondi-athreya/gpp-bulkhead-pattern) |
-| `23` | 🎨 **Interactive Portfolio** | Frontend · UX/UI | React · Tailwind · Framer Motion | [→](https://github.com/akondi-athreya/athreya-portfolio) |
+| `23` | 🎨 **Interactive Portfolio** | Frontend · UX/UI | React · Tailwind · Framer Motion | [→](https://github.com/akondi-athreya/gpp-athreya-portfolio) |
 | `24` | 🤖 **Conversational Form AI** | AI · Full-Stack | React · Node.js · JSON Schema | [→](https://github.com/akondi-athreya/gpp-conversational-form) |
+| `25` | 🛡️ **Multi-Provider Auth** | Security · Backend · Auth | Node.js · PostgreSQL · Prisma · Redis | [→](https://github.com/akondi-athreya/gpp-multi-authentication) |
+
 
 </details>
 
@@ -483,7 +485,7 @@ Includes a demo application with isolated tenant CRUD APIs, a dynamic `TenantAwa
 ---
 
 ### `17` 🔐 User Profile Service — *Secret Management with HashiCorp Vault*
-**[`→ View Repository`](https://github.com/akondi-athreya/gpp-user-profile-service)**
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-secure-user-profile-service)**
 
 ```
 DOMAIN   │ Backend · Security · Configuration
@@ -627,7 +629,7 @@ Features per-tier **Circuit Breakers** that trip independently, ensuring a failu
 ---
 
 ### `23` 🎨 Interactive Portfolio — *Animated Personal Branding*
-**[`→ View Repository`](https://github.com/akondi-athreya/athreya-portfolio)**
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-athreya-portfolio)**
 
 ```
 DOMAIN   │ Full-Stack · Frontend Engineering · UX/UI
@@ -668,6 +670,30 @@ Includes a **live form renderer** with support for conditional field visibility 
 ✦ Live form renderer with conditional logic support
 ✦ Schema validation with Ajv + automated LLM retry logic
 ✦ Diff panel + Multi-format export (JSON/Code/cURL)
+```
+
+<br/>
+
+---
+
+### `25` 🛡️ Multi-Provider Auth — *OAuth 2.0 & JWT Authentication*
+**[`→ View Repository`](https://github.com/akondi-athreya/gpp-multi-authentication)**
+
+```
+DOMAIN   │ Security · Backend · Authentication
+STACK    │ Node.js · PostgreSQL · Prisma · Redis · OAuth 2.0 · Passport
+PATTERN  │ Multi-Provider Auth · JWT Access/Refresh · RBAC · Rate Limiting
+```
+
+Production-oriented authentication service supporting local credentials alongside Google and GitHub OAuth 2.0. Implements a robust security layer with JWT-based access and refresh tokens, role-based access control (RBAC), and request throttling to mitigate brute-force attacks.
+
+Database persistence is handled via Prisma with PostgreSQL, with Redis powering session and rate-limit tracking. The service is fully containerized for seamless deployment.
+
+```
+✦ Multi-provider support: Local, Google, and GitHub OAuth 2.0
+✦ JWT-based auth with stateless access + persistent refresh tokens
+✦ Role-Based Access Control (RBAC) with admin-only endpoints
+✦ Integrated rate limiting and security headers (Helmet)
 ```
 
 <br/>
